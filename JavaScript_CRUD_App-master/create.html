@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript CRUD App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">HotelsLviv</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+        aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">My Hotels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create.html">Create Hotel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="edit.html">Edit Hotel</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" id="myInput" 
+                placeholder="Type name of hotel..." onkeyup="searchFunction()" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Clear</button>
+            </form>
+        </div>
+    </nav>
+    <section class="create__section">
+        <form class="main__form" name="myForm" onsubmit="checkTypeInputValue()" method="POST">
+            <h3 class="main__form-title">Create Hotel</h3>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" maxlength="60" required>
+            </div>
+            <div class="form-group">
+                <label for="visitors">Number of visitors per year</label>
+                <input type="text" class="form-control" id="visitors" name="visitors" maxlength="70" required>
+            </div>
+            <div class="form-group">
+                <label for="rooms">Number of rooms</label>
+                <input type="text" class="form-control" id="rooms" name="rooms" maxlength="60" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+    </section>
+    <script src="js/create&edit.js"></script>
+</body>
+
+</html>
